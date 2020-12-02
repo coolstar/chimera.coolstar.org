@@ -1,0 +1,141 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+
+    &.scrolls {
+        padding: 50px 0;
+        background: none;
+        -webkit-backdrop-filter: blur(0);
+        backdrop-filter: blur(0);
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+        &.scrolled {
+            padding: 15px 0;
+            color: #fff;
+            background: #2cb1be;
+
+            @supports (backdrop-filter:none) or (-webkit-backdrop-filter:none) {
+                background: rgba(44, 177, 190, 0.9);
+                -webkit-backdrop-filter: blur(10px) saturate(3);
+                backdrop-filter: blur(10px) saturate(3);
+            }
+
+            > div a {
+                color: white!important;
+
+                svg, i {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    > div {
+        max-width: 802px;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 8px 20px;
+            margin: 0 36px;
+            color: #919196;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 10px;
+            transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .icon-nav {
+            > svg {
+                width: 26px;
+                height: 26px;
+            }
+            
+            > i {
+                font-size: 26px;
+            }
+       }
+    }
+
+    @media(max-width: 640px) {
+        &.scrolls {
+            padding: 15px 0;
+
+            &.scrolled {
+                padding: 10px 0!important;
+            }
+        }
+
+        > div a {
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+
+    &.basic {
+        padding: 0;
+        border-bottom: 1px solid #eee;
+
+        > div {
+            padding: 20px;
+            text-align: initial;
+            max-width: none;
+            position: relative;
+            
+            .back-button {
+                display: inline-block;
+                color: #888;
+                font-weight: 600;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                border-right: 1px solid #ddd;
+                padding-right: 16px;
+                margin-right: 16px;
+                vertical-align: middle;
+
+                i {
+                    font-size: 17px;
+                    margin-right: 4px;
+                }
+                
+                > span {
+                    position: relative;
+                    top: -1px;
+                }
+            }
+
+            .icon {
+                height: 30px;
+                width: 30px;
+            }
+
+            .page-title {
+                text-transform: none;
+                color: #444;
+                margin: 0;
+                margin-left: 12px;
+                padding: 0;
+                font-weight: 600;
+            }
+        }
+    }
+}

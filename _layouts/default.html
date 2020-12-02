@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        {% if layout.css %}
+        {% for cssFile in layout.css %}
+        <link href="{% if page.absoluteAssets %}{{cssFile | absolute_url}}{% else %}{{cssFile | relative_url}}{% endif %}" rel="stylesheet" />
+        {% endfor %}
+        {% endif %}
+        {% if page.css %}
+        {% for cssFile in page.css %}
+        <link href="{% if page.absoluteAssets %}{{cssFile | absolute_url}}{% else %}{{cssFile | relative_url}}{% endif %}" rel="stylesheet" />
+        {% endfor %}
+        {% endif %}
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({
+                  google_ad_client: "ca-pub-5893310803057886",
+                  enable_page_level_ads: true
+             });
+        </script>
+    </head>
+    <body>
+        {{ content }}
+        {% include footer.html %}
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        {% if layout.js %}
+        {% for jsFile in layout.js %}
+        <script type="text/javascript" src="{% if page.absoluteAssets %}{{jsFile | absolute_url}}{% else %}{{jsFile | relative_url}}{% endif %}"></script>
+        {% endfor %}
+        {% endif %}
+        {% if page.js %}
+        {% for jsFile in page.js %}
+        <script type="text/javascript" src="{% if page.absoluteAssets %}{{jsFile | absolute_url}}{% else %}{{jsFile | relative_url}}{% endif %}"></script>
+        {% endfor %}
+        {% endif %}
+        {% if page.jsSnippets %}
+        {% for jsSnippet in page.jsSnippets %}
+        <script type="text/javascript">{{ jsSnippet }}</script>
+        {% endfor %}
+        {% endif %}
+        {% if layout.jsSnippets %}
+        {% for jsSnippet in layout.jsSnippets %}
+        <script type="text/javascript">{{ jsSnippet }}</script>
+        {% endfor %}
+        {% endif %}
+    </body>
+</html>

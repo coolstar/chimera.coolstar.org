@@ -1,0 +1,18 @@
+title: Chimera
+tagline: Your device, your way.
+description: >- # this means to ignore newlines until "baseurl:"
+  Introducing Chimera, the innovative new jailbreak from the Electra Team.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://chimera.sh" # the base hostname & protocol for your site
+twitter_username: electra_team
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+permalink: /:slug
+
+collections:
+  releases:
+    output: true

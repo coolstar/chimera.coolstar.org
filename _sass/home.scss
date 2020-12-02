@@ -132,9 +132,15 @@ body {
 
         .dropmenu-content a {
             color: #fff;
-            padding: 12px 16px;
+            padding: 12px 8px;
             text-decoration: none;
             display: block;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .dropmenu-content a small {
+            margin-left: 10px;
         }
 
         .dropmenu-content a:hover {

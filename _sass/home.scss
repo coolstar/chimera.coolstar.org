@@ -87,13 +87,16 @@ body {
             }
         }
 
+        .btncontainer {
+            padding: 12px 14px;
+            margin: 12px 0 20px;
+        }
+
         .btn {
             color: #fff;
             border-radius: 6px;
             font-weight: 600;
-            padding: 12px 14px;
             display: inline-block;
-            margin: 12px 0 20px;
             background: $tintColour;
             transition: 250ms ease-out transform, 250ms ease-out opacity;
             font-size: 15px;
@@ -132,6 +135,10 @@ body {
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+        }
+
+        .dropmenu-content a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .dropmenu:hover .dropmenu-content {

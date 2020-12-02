@@ -18,35 +18,11 @@
   twitter: tihmstar
   github: tihmstar
   
-- name: siguza
-  role: Developer
-  twitter: s1guza
-  github: siguza
-  
-- name: stek29
-  role: Developer
-  twitter: stek29
-  github: stek29
-  
-- name: xerub
-  role: Developer
-  twitter: xerub
-  github: xerub
-
-- name: ninjaprawn
-  role: Developer
-  twitter: theninjaprawn
-  github: ninjaprawn
-
 - name: Brandon Azad
   role: Exploit Developer
   twitter: _bazad
   github: bazad
   
-- name: Ian Beer
-  role: Exploit Developer
-  twitter: i41nbeer
-
 - name: PsychoTea
   role: Exploit Developer
   twitter: iBSparkes

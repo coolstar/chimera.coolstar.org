@@ -88,7 +88,6 @@ body {
         }
 
         .btncontainer {
-            padding: 12px 14px;
             margin: 12px 0 20px;
         }
 
@@ -96,6 +95,7 @@ body {
             color: #fff;
             border-radius: 6px;
             font-weight: 600;
+            padding: 12px 14px;
             display: inline-block;
             background: $tintColour;
             transition: 250ms ease-out transform, 250ms ease-out opacity;
